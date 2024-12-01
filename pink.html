@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Futuristic Neon Personal Webpage</title>
+  <style>
+    /* Global Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Arial', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #000000, #55006f);
+      color: #ffffff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    a {
+      text-decoration: none;
+      color: #ff66cc;
+    }
+
+    a:hover {
+      color: #ff99ff;
+    }
+
+    img, video {
+      max-width: 100%;
+    }
+
+    /* Header */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 100;
+    }
+
+    header .logo {
+      font-size: 1.5rem;
+      color: #ff66cc;
+      cursor: pointer;
+    }
+
+    header nav {
+      display: flex;
+      gap: 20px;
+    }
+
+    header nav a {
+      font-size: 1rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      transition: color 0.3s ease;
+    }
+
+    /* Footer */
+    footer {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      text-align: center;
+      padding: 10px;
+      background-color: rgba(0, 0, 0, 0.7);
+      font-size: 0.8rem;
+      color: #ff66cc;
+    }
+
+    footer .logo {
+      cursor: pointer;
+    }
+
+    /* Section Styles */
+    section {
+      display: none;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+    }
+
+    section.active {
+      display: flex;
+    }
+
+    /* Home Page */
+    #home .profile-pic {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      border: 5px solid #ff66cc;
+      overflow: hidden;
+      margin-bottom: 20px;
+    }
+
+    #home .caption {
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+      padding: 10px;
+      border: 2px solid #ff66cc;
+      text-align: center;
+    }
+
+    #home .social-icons {
+      display: flex;
+      gap: 20px;
+    }
+
+    #home .social-icons a {
+      font-size: 2rem;
+      color: #ffffff;
+      transition: transform 0.3s ease, color 0.3s ease;
+    }
+
+    #home .social-icons a:hover {
+      transform: scale(1.2);
+      color: #ff66cc;
+    }
+
+    #home .video-container {
+      margin-top: 30px;
+      border: 5px solid #ff66cc;
+      padding: 10px;
+    }
+
+    /* About Page */
+    #about {
+      padding: 20px;
+      text-align: center;
+    }
+
+    #about h1 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    #about p {
+      font-size: 1.2rem;
+      line-height: 1.6;
+    }
+
+    /* Blog Page */
+    #blog {
+      text-align: center;
+    }
+
+    #blog h1 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    #blog .images {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    #blog .images img {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      border: 3px solid #ff66cc;
+      transition: transform 0.3s ease;
+    }
+
+    #blog .images img:hover {
+      transform: scale(1.1);
+    }
+
+    /* Flex Page */
+    #flex {
+      text-align: center;
+    }
+
+    #flex h1 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    #flex .container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    #flex .container img, #flex .container video {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      border: 3px solid #ff66cc;
+      transition: transform 0.3s ease;
+    }
+
+    #flex .container img:hover, #flex .container video:hover {
+      transform: scale(1.1);
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo" onclick="navigateTo('home')">Hello Klipar</div>
+    <nav>
+      <a href="#" onclick="navigateTo('home')">Home</a>
+      <a href="#" onclick="navigateTo('about')">About Me</a>
+      <a href="#" onclick="navigateTo('blog')">Blog</a>
+      <a href="#" onclick="navigateTo('flex')">Flex</a>
+    </nav>
+  </header>
+
+  <!-- Home Section -->
+  <section id="home" class="active">
+    <div class="profile-pic">
+      <img src="your-image.jpg" alt="Your Picture">
+    </div>
+    <div class="caption">Welcome to my futuristic webpage!</div>
+    <div class="social-icons">
+      <a href="https://facebook.com" target="_blank">🌐</a>
+      <a href="https://twitter.com" target="_blank">🐦</a>
+      <a href="https://instagram.com" target="_blank">📸</a>
+    </div>
+    <div class="video-container">
+      <video controls>
+        <source src="your-video.mp4" type="video/mp4">
+      </video>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about">
+    <h1>About Me</h1>
+    <p>Hello! I'm Klipar, a futuristic enthusiast with a passion for design, creativity, and innovation. Welcome to my personal webpage!</p>
+  </section>
+
+  <!-- Blog Section -->
+  <section id="blog">
+    <h1>Lessons Learned and Activities</h1>
+    <div class="images">
+      <img src="activity1.jpg" alt="Activity 1">
+      <img src="activity2.jpg" alt="Activity 2">
+    </div>
+  </section>
+
+  <!-- Flex Section -->
+  <section id="flex">
+    <h1>Showcase</h1>
+    <div class="container">
+      <img src="talent1.jpg" alt="Talent 1">
+      <img src="talent2.jpg" alt="Talent 2">
+      <img src="talent3.jpg" alt="Talent 3">
+      <img src="talent4.jpg" alt="Talent 4">
+      <img src="talent5.jpg" alt="Talent 5">
+      <video controls>
+        <source src="talent-video1.mp4" type="video/mp4">
+      </video>
+      <video controls>
+        <source src="talent-video2.mp4" type="video/mp4">
+      </video>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <span class="logo" onclick="navigateTo('home')">Hello Klipar</span> | @2024 Hello Klipar
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    function navigateTo(page) {
+      // Hide all sections
+      document.querySelectorAll('section').forEach(section => {
+        section.classList.remove('active');
+      });
+      // Show the target section
+      document.getElementById(page).classList.add('active');
+    }
+  </script>
+</body>
+</html>
