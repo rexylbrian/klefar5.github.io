@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello Klipar</title>
+    <link rel="stylesheet" href="C-styles.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <a href="index.html"><img src="bplogo.png" alt="Logo"></a> 
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.htmls">Home</a></li>
+                <li><a href="C-about.html">About Me</a></li>
+                <li><a href="C-blog.html">Blog</a></li>
+                <li><a href="C-flex.html">Flex</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="home">
+	<div class="profile-pic">
+    <img src="myface2.jpg" alt="This is me" class="hover-image">
+    <audio id="hover-audio" src="bp.mp3"></audio></div>
+        <div class="caption"> Hi! Welcome, I' m Clifar!</div>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/profile.php?id=100091827446348">
+		    <img src="fbL.png" alt="Facebook"></a>
+		    <a href="https://www.instagram.com/clifar05">
+			<img src="igL.png" alt="Instagram"></a>
+            <a href="t.me/Farcli">
+			<img src="tgL.png" alt="Telegram"></a>
+        </div>
+    </section>
+
+    <footer>
+        <p>Programmed by:Hello Klipar @2024 v.1.0<p>
+    </footer>
+
+<script>
+    // Get the image and audio elements
+    const image = document.querySelector('.hover-image');
+    const audio = document.getElementById('hover-audio');
+
+    // Play the audio when the image is hovered
+    image.addEventListener('mouseover', () => {
+        audio.play(); // Play audio
+    });
+
+    // Pause the audio when the mouse leaves the image
+    image.addEventListener('mouseleave', () => {
+        audio.pause(); // Pause audio
+        audio.currentTime = 0; // Reset the audio to the beginning
+    });
+</script>
+</body>
+</html>
